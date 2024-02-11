@@ -14,13 +14,14 @@
     />
 
     <label class="text-md font-medium text-gray-900 dark:text-gray-100" for="content">Content</label>
-    <input
+    <textarea
       id="content"
       v-model="content"
       type="text"
       placeholder="Content"
       class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600"
-    />
+    >
+    </textarea>
 
     <label class="text-md font-medium text-gray-900 dark:text-gray-100" for="author">Author</label>
     <input
