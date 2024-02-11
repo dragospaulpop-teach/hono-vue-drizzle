@@ -33,7 +33,7 @@
     <!-- fab -->
     <button
       @click="addTodo"
-      class="fixed bottom-10 right-10 p-4 text-white bg-blue-500 rounded-full w-12 h-12 flex justify-center items-center"
+      class="fixed bottom-10 right-10 p-4 text-white bg-blue-500 rounded-full w-12 h-12 flex justify-center items-center focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-800 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700"
     >
       +
     </button>
