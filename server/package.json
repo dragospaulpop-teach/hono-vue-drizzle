@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.7.0",
+    "better-sqlite3": "^9.4.1",
+    "dotenv": "^16.4.2",
+    "drizzle-orm": "^0.29.3",
+    "hono": "^4.0.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.14",
+    "tsx": "^3.12.2"
+  }
+}
