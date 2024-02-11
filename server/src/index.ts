@@ -21,7 +21,15 @@ app.get('/', (c) => {
 // create new todo
 app.post('/', async (c) => {
   const todo = await c.req.json()
-  await db.insert(todos).values({ ...todo })
+  await db.insert(todos).values({ ...todo, date: new Date().toLocaleString('ro-RO', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
+  })
   return c.json({ ok: true })
 })
 
@@ -31,7 +39,15 @@ app.patch('/:id', async (c) => {
   const updatedTodo = await c.req.json()
 
   await db.update(todos)
-    .set({ ...updatedTodo })
+    .set({ ...updatedTodo, date: new Date().toLocaleString('ro-RO', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+      })
+    })
     .where(eq(todos.id, id))
 
   return c.json({ ok: true })
